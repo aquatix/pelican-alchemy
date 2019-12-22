@@ -1,13 +1,19 @@
 <div class="row">
-  {% if SITEIMAGE %}
+  {% if SITEIMAGE and not SITEIMAGE_AS_TITLE %}
     <div class="col-sm-4">
       <a href="{{ SITEURL }}/">
         <img class="img-fluid rounded" src={{ url(SITEIMAGE) }} alt="{{ SITENAME }}">
       </a>
     </div>
   {% endif %}
-  <div class="col-sm-{% if SITEIMAGE %}8{% else %}12{% endif %}">
-    <h1 class="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+  <div class="col-sm-{% if SITEIMAGE and not SITEIMAGE_AS_TITLE %}8{% else %}12{% endif %}">
+    {% if SITEIMAGE and SITEIMAGE_AS_TITLE %}
+      <h1 class="title"><a href="{{ SITEURL }}/">
+        <img class="img-fluid rounded" src={{ url(SITEIMAGE) }} alt="{{ SITENAME }}">
+      </a></h1>
+    {% else %}
+      <h1 class="title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    {% endif %}
     {% if SITESUBTITLE %}
       <p class="text-muted">{{ SITESUBTITLE }}</p>
     {% endif %}

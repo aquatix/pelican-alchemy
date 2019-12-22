@@ -114,6 +114,7 @@ Visit the [Settings wiki](https://github.com/nairobilug/pelican-alchemy/wiki/Set
 
 - **SITESUBTITLE**: Subtitle that appears in the header.
 - **SITEIMAGE**: Image that appears in the header.
+- **SITEIMAGE_AS_TITLE**: True for using the site image as the header, useful for when the image is a logo. When not set, or set as False, the image and title will be used as normal.
 - **DESCRIPTION**: Index HTML head `<meta>` description.
 - **LINKS**: A list of tuples (Title, URL) for menu links.
 - **ICONS**: A list of tuples (Icon, URL) for icon links.

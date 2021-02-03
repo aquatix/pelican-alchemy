@@ -21,6 +21,8 @@
 {% if ISSO_URL and SITEURL and article.status != "draft" %}
   <div id="isso_thread">
   <script data-isso="{{ ISSO_URL }}/"
+    data-isso-max-comments-top="inf"
+    data-isso-max-comments-nested="inf"
     src="{{ ISSO_URL }}/js/embed.min.js"></script>
   <section id="isso-thread"></section>
   </div>

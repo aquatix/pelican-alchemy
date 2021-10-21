@@ -4,3 +4,7 @@ build/
 *.egg-info/
 
 .venv*
+
+tags
+*.swp
+*.swo

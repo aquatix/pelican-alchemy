@@ -142,3 +142,18 @@ hr {
     margin-right: 10px;
   }
 }
+
+/* Post navigation */
+.post-nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.post-nav .page-link {
+    margin-top: .25rem;
+    display: block;
+    padding: .5rem .75rem;
+    line-height: 1.25;
+    width: 100%;
+}

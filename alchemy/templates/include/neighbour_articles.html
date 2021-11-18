@@ -1,34 +1,40 @@
-<ul class="pagination">
-    {% if article.prev_article %}
-        <li class="page-item">
-            <a class="page-link" href="{{ SITEURL }}/{{ article.prev_article.url}}">
-                &laquo;&nbsp;{{ article.prev_article.title }}
-            </a>
-        </li>
-    {% endif %}
-    {% if article.next_article %}
-        <li class="page-item" style="margin-left: .5rem">
+{% if article.next_article %}
+    <h3>Next</h3>
+    <div class="post-nav">
+        <div class="page-item">
             <a class="page-link" href="{{ SITEURL }}/{{ article.next_article.url}}">
-              {{ article.next_article.title }}&nbsp;&raquo;
+                <h4>{{ article.next_article.title }}</h4>
+                {{ article.next_article.summary|striptags }}
             </a>
-        </li>
-    {% endif %}
-</ul>
+        </div>
+        {% if article.next_article_in_category and article.next_article_in_category != article.next_article %}
+            From the same category:
+            <div class="page-item">
+                <a class="page-link" href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
+                    <h4>{{ article.next_article_in_category.title }}</h4>
+                    {{ article.next_article_in_category.summary|striptags }}
+                </a>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
 
-From the same category:
-<ul class="pagination">
-    {% if article.prev_article_in_category %}
-        <li class="page-item">
-            <a class="page-link" href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
-                &laquo;&nbsp;{{ article.prev_article_in_category.title }}
+{% if article.prev_article %}
+    <h3>Previous</h3>
+    <div class="post-nav">
+        <div class="page-item">
+            <a class="page-link" href="{{ SITEURL }}/{{ article.prev_article.url}}">
+                <h4>{{ article.prev_article.title }}</h4>
+                {{ article.prev_article.summary|striptags }}
             </a>
-        </li>
-    {% endif %}
-    {% if article.next_article_in_category %}
-        <li class="page-item" style="margin-left: .5rem">
-            <a class="page-link" href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
-                {{ article.next_article_in_category.title }}&nbsp;&raquo;
-            </a>
-        </li>
-    {% endif %}
-</ul>
+        </div>
+        {% if article.prev_article_in_category and article.prev_article_in_category != article.prev_article %}
+            <div class="page-item">
+                <a class="page-link" href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
+                    <h4>{{ article.prev_article_in_category.title }}</h4>
+                    {{ article.prev_article_in_category.summary|striptags }}
+                </a>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

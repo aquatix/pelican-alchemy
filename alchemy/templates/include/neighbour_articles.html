@@ -1,20 +1,15 @@
 {% if article.next_article %}
     <h3>Next</h3>
     <div class="post-nav">
-        <div class="page-item">
-            <a class="page-link" href="{{ SITEURL }}/{{ article.next_article.url}}">
-                <h4>{{ article.next_article.title }}</h4>
-                {{ article.next_article.summary|striptags }}
-            </a>
-        </div>
+        <a class="post-link" href="{{ SITEURL }}/{{ article.next_article.url}}">
+            <h4>{{ article.next_article.title }}</h4>
+            {{ article.next_article.summary|striptags }}
+        </a>
         {% if article.next_article_in_category and article.next_article_in_category != article.next_article %}
-            From the same category:
-            <div class="page-item">
-                <a class="page-link" href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
-                    <h4>{{ article.next_article_in_category.title }}</h4>
-                    {{ article.next_article_in_category.summary|striptags }}
-                </a>
-            </div>
+            <a class="post-link" href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
+                <h4>{{ article.next_article_in_category.title }}</h4>
+                {{ article.next_article_in_category.summary|striptags }}
+            </a>
         {% endif %}
     </div>
 {% endif %}
@@ -22,19 +17,15 @@
 {% if article.prev_article %}
     <h3>Previous</h3>
     <div class="post-nav">
-        <div class="page-item">
-            <a class="page-link" href="{{ SITEURL }}/{{ article.prev_article.url}}">
-                <h4>{{ article.prev_article.title }}</h4>
-                {{ article.prev_article.summary|striptags }}
-            </a>
-        </div>
+        <a class="post-link" href="{{ SITEURL }}/{{ article.prev_article.url}}">
+            <h4>{{ article.prev_article.title }}</h4>
+            {{ article.prev_article.summary|striptags }}
+        </a>
         {% if article.prev_article_in_category and article.prev_article_in_category != article.prev_article %}
-            <div class="page-item">
-                <a class="page-link" href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
-                    <h4>{{ article.prev_article_in_category.title }}</h4>
-                    {{ article.prev_article_in_category.summary|striptags }}
-                </a>
-            </div>
+            <a class="post-link" href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
+                <h4>{{ article.prev_article_in_category.title }}</h4>
+                {{ article.prev_article_in_category.summary|striptags }}
+            </a>
         {% endif %}
     </div>
 {% endif %}

@@ -145,15 +145,22 @@ hr {
 
 /* Post navigation */
 .post-nav {
-    list-style: none;
     padding-left: 0;
     margin-bottom: 1rem;
 }
 
-.post-nav .page-link {
+.post-nav a {
+    text-decoration: none;
+}
+
+.post-nav .post-link {
     margin-top: .25rem;
+    margin-left: 2rem;
     display: block;
     padding: .5rem .75rem;
     line-height: 1.25;
-    width: 100%;
+}
+
+.post-nav .post-link:hover {
+    background-color: #666 !important;
 }

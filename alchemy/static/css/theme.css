@@ -176,3 +176,7 @@ hr {
 .post-link .post-info h4 {
     display: flex;
 }
+
+.post-link .article-image {
+    width: 150px
+}

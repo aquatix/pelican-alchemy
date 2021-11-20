@@ -1,30 +1,56 @@
 {% if article.next_article %}
-    <h3>Next</h3>
     <div class="post-nav">
         <a class="post-link" href="{{ SITEURL }}/{{ article.next_article.url}}">
-            <h4>{{ article.next_article.title }}</h4>
-            {{ article.next_article.summary|striptags }}
+            {% if article.next_article.image %}
+              <img class="article-image img-fluid rounded" alt="article header image" itemprop="image"
+                src="{{ article.next_article.image }}" />
+            {% endif %}
+            <div class="post-info">
+                <h4>{{ article.next_article.title }}</h4>
+                {{ article.next_article.summary|striptags }}
+            </div>
+            <i class="fas fa-arrow-right fa-3x"></i>
         </a>
         {% if article.next_article_in_category and article.next_article_in_category != article.next_article %}
             <a class="post-link" href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
-                <h4>{{ article.next_article_in_category.title }}</h4>
-                {{ article.next_article_in_category.summary|striptags }}
+                {% if article.next_article_in_category.image %}
+                  <img class="article-image img-fluid rounded" alt="article header image" itemprop="image"
+                    src="{{ article.next_article_in_category.image }}" />
+                {% endif %}
+                <div class="post-info">
+                    <h4>{{ article.next_article_in_category.title }}</h4>
+                    {{ article.next_article_in_category.summary|striptags }}
+                </div>
+                <i class="fas fa-arrow-right fa-3x"></i>
             </a>
         {% endif %}
     </div>
 {% endif %}
 
 {% if article.prev_article %}
-    <h3>Previous</h3>
     <div class="post-nav">
         <a class="post-link" href="{{ SITEURL }}/{{ article.prev_article.url}}">
-            <h4>{{ article.prev_article.title }}</h4>
-            {{ article.prev_article.summary|striptags }}
+            <i class="fas fa-arrow-left fa-3x"></i>
+            <div class="post-info">
+                <h4>{{ article.prev_article.title }}</h4>
+                {{ article.prev_article.summary|striptags }}
+            </div>
+            {% if article.prev_article.image %}
+              <img class="article-image img-fluid rounded" alt="article header image" itemprop="image"
+                src="{{ article.prev_article.image }}" />
+            {% endif %}
         </a>
         {% if article.prev_article_in_category and article.prev_article_in_category != article.prev_article %}
             <a class="post-link" href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
-                <h4>{{ article.prev_article_in_category.title }}</h4>
-                {{ article.prev_article_in_category.summary|striptags }}
+                <i class="fas fa-arrow-left fa-3x"></i>
+                <div class="post-info">
+                    <h4>{{ article.prev_article_in_category.title }}</h4>
+                    {{ article.prev_article_in_category.summary|striptags }}
+                </div>
+                {% if article.prev_article_in_category.image %}
+                  <img class="article-image img-fluid rounded" alt="article header image" itemprop="image"
+                    src="{{ article.prev_article_in_category.image }}" />
+                {% endif %}
             </a>
         {% endif %}
     </div>

@@ -159,12 +159,20 @@ hr {
 
 .post-nav .post-link {
     margin-top: .25rem;
-    margin-left: 2rem;
-    display: block;
+    display: flex;
     padding: .5rem .75rem;
     line-height: 1.25;
 }
 
 .post-nav .post-link:hover {
     background-color: #666 !important;
+}
+
+.post-link .post-info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.post-link .post-info h4 {
+    display: flex;
 }

@@ -7,7 +7,7 @@
             {% endif %}
             <div class="post-info">
                 <h4>{{ article.next_article.title }}</h4>
-                {{ article.next_article.summary|striptags }}
+                <p>{{ article.next_article.summary|striptags }}</p>
             </div>
             <i class="fas fa-arrow-right fa-3x"></i>
         </a>
@@ -19,7 +19,7 @@
                 {% endif %}
                 <div class="post-info">
                     <h4>{{ article.next_article_in_category.title }}</h4>
-                    {{ article.next_article_in_category.summary|striptags }}
+                    <p>{{ article.next_article_in_category.summary|striptags }}</p>
                 </div>
                 <i class="fas fa-arrow-right fa-3x"></i>
             </a>
@@ -33,7 +33,7 @@
             <i class="fas fa-arrow-left fa-3x"></i>
             <div class="post-info">
                 <h4>{{ article.prev_article.title }}</h4>
-                {{ article.prev_article.summary|striptags }}
+                <p>{{ article.prev_article.summary|striptags }}</p>
             </div>
             {% if article.prev_article.image %}
               <img class="article-image img-fluid rounded" alt="article header image" itemprop="image"
@@ -45,7 +45,7 @@
                 <i class="fas fa-arrow-left fa-3x"></i>
                 <div class="post-info">
                     <h4>{{ article.prev_article_in_category.title }}</h4>
-                    {{ article.prev_article_in_category.summary|striptags }}
+                    <p>{{ article.prev_article_in_category.summary|striptags }}</p>
                 </div>
                 {% if article.prev_article_in_category.image %}
                   <img class="article-image img-fluid rounded" alt="article header image" itemprop="image"

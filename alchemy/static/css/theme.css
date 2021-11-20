@@ -143,6 +143,7 @@ hr {
   }
 }
 
+<<<<<<< Updated upstream
 /* Post navigation */
 .post-nav {
     padding-left: 0;
@@ -163,4 +164,13 @@ hr {
 
 .post-nav .post-link:hover {
     background-color: #666 !important;
+=======
+body {
+    font-family: "Source Sans Pro" !important;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: "Yrsa" !important;
+>>>>>>> Stashed changes
 }

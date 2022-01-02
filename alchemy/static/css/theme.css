@@ -81,6 +81,10 @@ hr {
   margin-bottom: 0;
 }
 
+.article {
+    margin-bottom: 3rem;
+}
+
 .article header ul,
 .article header li {
   margin-bottom: .5rem;
@@ -129,7 +133,6 @@ hr {
 /* Post navigation */
 .post-nav {
     padding-left: 0;
-    margin-bottom: 1rem;
 }
 
 .post-nav a {
@@ -137,7 +140,6 @@ hr {
 }
 
 .post-nav .post-link {
-    margin-top: .25rem;
     display: flex;
     padding: .5rem .75rem;
     line-height: 1.25;

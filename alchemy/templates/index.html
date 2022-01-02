@@ -24,6 +24,12 @@
             <i class="fas fa-clock"></i>
             {{ article.locale_date }}
           </li>
+          {% if article.location %}
+            <li class="list-inline-item" title="Location">
+              <i class="fas fa-location-arrow"></i>
+              {{ article.location }}
+            </li>
+          {% endif %}
           {% if not HIDE_CATEGORIES %}
           <li>
             <i class="fas fa-folder-open"></i>

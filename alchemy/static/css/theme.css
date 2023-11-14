@@ -130,7 +130,13 @@ hr {
   background-color: palegreen;
 }
 
-/* Post navigation */
+/* == Post navigation ====== */
+.post-nav-block {
+    /* Some breathing space before the navigation items */
+    padding-top: 3rem;
+}
+
+/* Nav-item for previous/next (neighbouring) post */
 .post-nav {
     padding-left: 0;
 }

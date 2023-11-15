@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-  <table class="table table-bordered table-striped">
+  <table class="table table-striped">
     {% for author, articles in authors|sort %}
       <tr>
         <td><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></td>

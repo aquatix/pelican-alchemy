@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-  <table class="table table-bordered table-striped">
+  <table class="table table-striped">
     {% for tag, articles in tags|sort %}
       <tr>
         <td><a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a></td>

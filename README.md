@@ -117,7 +117,7 @@ Visit the [Settings docs](docs/settings.md) for examples:
 - **SITEIMAGE_AS_TITLE**: True for using the site image as the header, useful for when the image is a logo. When not set, or set as False, the image and title will be used as normal.
 - **DESCRIPTION**: Index HTML head `<meta>` description.
 - **LINKS**: A list of tuples (Title, URL) for menu links.
-- **ICONS**: A list of tuples (Icon, URL) for icon links.
+- **ICONS**: A list of tuples (Icon, URL, Title) for icon links.
 - **FOOTER_LINKS**: A list of tuples (Title, URL) for footer links. Replaces
   default set of links (Authors, Archives, Categories, Tags).
 - **BOOTSTRAP_CSS**: URL of Bootstrap CSS file. Use this to enable Boostwatch themes.

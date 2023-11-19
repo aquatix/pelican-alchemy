@@ -3,7 +3,7 @@
 {% block head %}
   {{ super() }}
   {% if DESCRIPTION %}
-    <meta name="description" content="{{ DESCRIPTION|striptags }}">
+    <meta name="description" content="{{ DESCRIPTION|striptags|replace("\"", "&quot;") }}">
   {% endif %}
 {% endblock %}
 

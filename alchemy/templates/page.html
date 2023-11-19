@@ -2,7 +2,7 @@
 
 {% block head %}
   {{ super() }}
-  <meta name="description" content="{{ page.summary|striptags }}">
+  <meta name="description" content="{{ page.summary|striptags|replace("\"", "&quot;") }}">
 {% endblock %}
 
 {% block title %}

@@ -7,10 +7,10 @@
                 src="{{ article.next_article.image }}" />
             {% endif %}
             <div class="post-info">
-                <h4>{{ article.next_article.title }}{% if article.next_article.link %}&nbsp;<i class="fas fa-link"></i>{% endif %}</h4>
+                <h4>{{ article.next_article.title }}{% if article.next_article.link %}&nbsp;<i class="fa-solid fa-link"></i>{% endif %}</h4>
                 <p>{{ article.next_article.summary|striptags }}</p>
             </div>
-            <i class="fas fa-arrow-right fa-3x"></i>
+            <i class="fa-solid fa-arrow-right fa-3x"></i>
         </a>
         {% if article.next_article_in_category and article.next_article_in_category != article.next_article %}
             <a class="post-link" href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
@@ -19,10 +19,10 @@
                     src="{{ article.next_article_in_category.image }}" />
                 {% endif %}
                 <div class="post-info">
-                    <h4>{{ article.next_article_in_category.title }}{% if article.next_article_in_category.link %}&nbsp;<i class="fas fa-link"></i>{% endif %}</h4>
+                    <h4>{{ article.next_article_in_category.title }}{% if article.next_article_in_category.link %}&nbsp;<i class="fa-solid fa-link"></i>{% endif %}</h4>
                     <p>{{ article.next_article_in_category.summary|striptags }}</p>
                 </div>
-                <i class="fas fa-arrow-right fa-3x"></i>
+                <i class="fa-solid fa-arrow-right fa-3x"></i>
             </a>
         {% endif %}
     </div>
@@ -31,9 +31,9 @@
 {% if article.prev_article %}
     <div class="post-nav">
         <a class="post-link" href="{{ SITEURL }}/{{ article.prev_article.url}}">
-            <i class="fas fa-arrow-left fa-3x"></i>
+            <i class="fa-solid fa-arrow-left fa-3x"></i>
             <div class="post-info">
-                <h4>{{ article.prev_article.title }}{% if article.prev_article.link %}&nbsp;<i class="fas fa-link"></i>{% endif %}</h4>
+                <h4>{{ article.prev_article.title }}{% if article.prev_article.link %}&nbsp;<i class="fa-solid fa-link"></i>{% endif %}</h4>
                 <p>{{ article.prev_article.summary|striptags }}</p>
             </div>
             {% if article.prev_article.image %}
@@ -43,9 +43,9 @@
         </a>
         {% if article.prev_article_in_category and article.prev_article_in_category != article.prev_article %}
             <a class="post-link" href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
-                <i class="fas fa-arrow-left fa-3x"></i>
+                <i class="fa-solid fa-arrow-left fa-3x"></i>
                 <div class="post-info">
-                    <h4>{{ article.prev_article_in_category.title }}{% if article.prev_article_in_category.link %}&nbsp;<i class="fas fa-link"></i>{% endif %}</h4>
+                    <h4>{{ article.prev_article_in_category.title }}{% if article.prev_article_in_category.link %}&nbsp;<i class="fa-solid fa-link"></i>{% endif %}</h4>
                     <p>{{ article.prev_article_in_category.summary|striptags }}</p>
                 </div>
                 {% if article.prev_article_in_category.image %}

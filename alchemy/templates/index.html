@@ -21,24 +21,24 @@
       <header class="col-sm-4 text-muted">
         <ul>
           <li title="{{ article.date.isoformat() }}">
-            <i class="fas fa-clock fa-fw"></i>
+            <i class="fa-solid fa-clock fa-fw"></i>
             {{ article.locale_date }}
           </li>
           {% if article.location %}
             <li class="list-inline-item" title="Location">
-              <i class="fas fa-location-arrow fa-fw"></i>
+              <i class="fa-solid fa-location-arrow fa-fw"></i>
               {{ article.location }}
             </li>
           {% endif %}
           {% if not HIDE_CATEGORIES %}
           <li>
-            <i class="fas fa-folder-open fa-fw"></i>
+            <i class="fa-solid fa-folder-open fa-fw"></i>
             <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
           </li>
           {% endif %}
           {% if not HIDE_AUTHORS and article.authors %}
             <li>
-              <i class="fas fa-user fa-fw"></i>
+              <i class="fa-solid fa-user fa-fw"></i>
               {% for author in article.authors %}
                 <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
               {% endfor %}
@@ -46,7 +46,7 @@
           {% endif %}
           {% if TAGS_IN_INDEX and article.tags %}
             <li>
-              <i class="fas fa-tag fa-fw"></i>
+              <i class="fa-solid fa-tag fa-fw"></i>
               {% for tag in article.tags %}
                 <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>{% if not loop.last %}, {% endif %}
               {% endfor %}
@@ -56,7 +56,7 @@
       </header>
       <div class="col-sm-8">
         <h4 class="title">
-          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.link %} <i class="fas fa-link"></i>{% endif %}</a>
+          <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.link %} <i class="fa-solid fa-link"></i>{% endif %}</a>
         </h4>
         <div class="content">
           {{ article.summary|striptags }}

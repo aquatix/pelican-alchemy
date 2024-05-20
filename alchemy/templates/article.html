@@ -3,6 +3,9 @@
 {% block head %}
   {{ super() }}
   <meta name="description" content="{{ article.summary|striptags|replace("\"", "&quot;") }}">
+  {% if not HIDE_AUTHORS and article.authors %}
+    <meta name="author" content="{% for author in article.authors %}{{ author }}{% if not loop.last %}, {% endif %}{% endfor %}">
+  {% endif %}
 {% endblock %}
 
 {% block title %}

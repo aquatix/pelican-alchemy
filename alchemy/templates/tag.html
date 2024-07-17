@@ -1,9 +1,14 @@
 {% extends "index.html" %}
 
-{% block title %}
+{%- block title -%}
   #{{ tag }} Articles | {{ SITENAME }}
-{% endblock %}
+{%- endblock -%}
 
-{% block page_header %}
+{%- block head %}
+  <meta name="robots" content="noindex">
+  {{ super() }}
+{%- endblock -%}
+
+{% block page_header -%}
   #{{ tag }} Articles
-{% endblock %}
+{%- endblock %}

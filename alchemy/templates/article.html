@@ -8,19 +8,19 @@
   {% endif %}
 {% endblock %}
 
-{% block title %}
+{%- block title -%}
   {{ article.title|striptags }} {{ super() }}
-{% endblock %}
+{%- endblock -%}
 
-{% block page_header %}
-  {% if article.link %}
+{% block page_header -%}
+  {%- if article.link -%}
     <a href="{{ article.link }}" rel="bookmark">
-  {% endif %}
+  {%- endif -%}
   {{ article.title }}
-  {% if article.link %}
+  {%- if article.link %}
     <i class="fa-solid fa-link"></i></a>
-  {% endif %}
-{% endblock %}
+  {%- endif -%}
+{%- endblock %}
 
 {% block content %}
   <article class="article">

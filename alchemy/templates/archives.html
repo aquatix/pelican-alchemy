@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}
+{% block title -%}
   Archives {{ super() }}
-{% endblock %}
+{%- endblock %}
 
-{% block page_header %}
+{% block page_header -%}
   Archives
-{% endblock %}
+{%- endblock %}
 
 {% block content %}
 {% for year, year_articles in articles|groupby('date.year')|sort(reverse=True) %}

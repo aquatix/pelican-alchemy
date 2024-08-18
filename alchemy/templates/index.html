@@ -59,7 +59,7 @@
           <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.link %} <i class="fa-solid fa-link"></i>{% endif %}</a>
         </h3>
         <div class="content">
-          {{ article.summary|striptags }}
+          {{ article.summary|striptags|striptags }}
         </div>
         {% if article.image %}
           <img class="article-image img-fluid rounded" alt="article header image" src="{{ article.image }}">

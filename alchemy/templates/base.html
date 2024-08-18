@@ -86,7 +86,7 @@
   </footer>
 
   {% for script in THEME_JS_OVERRIDES or () %}
-  <script defer type="text/javascript" src="{{ url(script) }}" crossorigin="anonymous"></script>
+  <script defer src="{{ url(script) }}" crossorigin="anonymous"></script>
   {% endfor %}
 </body>
 

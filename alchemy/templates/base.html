@@ -27,26 +27,26 @@
 {%- endif -%}
 
 {% if article is defined -%}
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
-  <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
-  <meta property="og:description" content="{{ article.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
-  <meta property="og:image" content="{% if article.image is defined %}{{ article.image }}{% else %}{{ SITEURL }}/images/opengraph-default.png{% endif %}" />
-  <meta property="og:site_name" content="{{ SITENAME }}" />
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+  <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}">
+  <meta property="og:description" content="{{ article.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}">
+  <meta property="og:image" content="{% if article.image is defined %}{{ article.image }}{% else %}{{ SITEURL }}/images/opengraph-default.png{% endif %}">
+  <meta property="og:site_name" content="{{ SITENAME }}">
 {%- elif page is defined -%}
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
-  <meta property="og:title" content="{{ SITENAME }} - {{ page.title | replace("\"", "&quot;") }}" />
-  <meta property="og:description" content="{{ page.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
-  <meta property="og:image" content="{% if page.image is defined %}{{ page.image }}{% else %}{{ SITEURL }}/images/opengraph-default.png{% endif %}" />
-  <meta property="og:site_name" content="{{ SITENAME }}" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+  <meta property="og:title" content="{{ SITENAME }} - {{ page.title | replace("\"", "&quot;") }}">
+  <meta property="og:description" content="{{ page.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}">
+  <meta property="og:image" content="{% if page.image is defined %}{{ page.image }}{% else %}{{ SITEURL }}/images/opengraph-default.png{% endif %}">
+  <meta property="og:site_name" content="{{ SITENAME }}">
 {%- else -%}
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
-  <meta property="og:title" content="{{ SITENAME }}" />
-  <meta property="og:description" content="A page on {{ AUTHOR }}'s personal site" />
-  <meta property="og:image" content="{{ SITEURL }}/images/opengraph-default.png" />
-  <meta property="og:site_name" content="{{ SITENAME }}" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}">
+  <meta property="og:title" content="{{ SITENAME }}">
+  <meta property="og:description" content="A page on {{ AUTHOR }}'s personal site">
+  <meta property="og:image" content="{{ SITEURL }}/images/opengraph-default.png">
+  <meta property="og:site_name" content="{{ SITENAME }}">
 {%- endif %}
 
   <link rel="stylesheet" href="{{ url(BOOTSTRAP_CSS or '/theme/css/bootstrap.min.css') }}">

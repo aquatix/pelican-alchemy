@@ -120,6 +120,7 @@ Visit the [Settings docs](docs/settings.md) for examples:
 - **ICONS**: A list of tuples (Icon, URL, Title) for icon links.
 - **FOOTER_LINKS**: A list of tuples (Title, URL) for footer links. Replaces
   default set of links (Authors, Archives, Categories, Tags).
+- **FOOTER_NOTE**: A (short) text to show in the footer, like a copyright
 - **BOOTSTRAP_CSS**: URL of Bootstrap CSS file. Use this to enable Boostwatch themes.
 - **PYGMENTS_STYLE**: Built-in Pygments style for syntax highlighting.
 - **HIDE_AUTHORS**: Hide the author(s) of an article - useful for single author sites.

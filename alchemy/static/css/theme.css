@@ -126,7 +126,7 @@ hr {
   background-color: lightpink;
 }
 
-.admonition.hint, .admonition.tip {
+.admonition.hint, .admonition.info, .admonition.tip {
   border-color: limegreen;
   background-color: palegreen;
 }
